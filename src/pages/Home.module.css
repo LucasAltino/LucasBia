@@ -9,6 +9,8 @@
     font-family: "League Spartan", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+    flex-direction: column;
+
 }
 
 .card{
@@ -24,10 +26,8 @@
     height: 50vh;
     width: 100%;
     border-radius: 4vw;
-    background: url("/public/WhatsApp Image 2025-09-28 at 01.23.40.jpeg") no-repeat;
-    background-size: 113%;
-    background-position-x: -9vw;
-    background-position-y: -11vw;
+    background-size: cover;
+    background-position: center;
 }
 
 .titulo{
@@ -112,8 +112,9 @@ svg{
     width: 90vw;
     border-radius: 4vw;
     height: 65vh;
-    margin-left: -5vw;
-    margin-bottom: 30vw;
+    margin-bottom: 40vw;
+    color: white;
+
 }
 
 .fotinha{
@@ -158,4 +159,20 @@ svg{
     padding-left: 5vw;
     font-size: 4vw;
     font-weight: 400;
+}
+
+.data{
+    background-image: url("/public/fundocoracao.png");
+    display: flex;
+    background-size: contain;
+    background-repeat: repeat;
+    width: 100vw;
+    height: 100vh;
+    margin-top: 10vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.data img{
+    width: 70%;
 }
