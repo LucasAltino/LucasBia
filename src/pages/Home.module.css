@@ -1,0 +1,161 @@
+.principal{
+    background-color: #920000;
+    display: flex;
+    align-items: center;
+    padding: 18vw 2vw;
+    width: 96vw;
+    min-height: 100vh;
+    justify-content: center;
+    font-family: "League Spartan", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.card{
+    color: white;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.foto{
+    height: 50vh;
+    width: 100%;
+    border-radius: 4vw;
+    background: url("/public/WhatsApp Image 2025-09-28 at 01.23.40.jpeg") no-repeat;
+    background-size: 113%;
+    background-position-x: -9vw;
+    background-position-y: -11vw;
+}
+
+.titulo{
+     text-align: left;
+     width: 100%;
+     font-size: 6vw;
+     font-weight: 500;
+     margin: 4.5vw 0 2vw 0
+ }
+
+.autor{
+    width: 100%;
+    margin: 0;
+    text-align: left;
+    color: #dcdcdc;
+    margin-bottom: 1vw;
+}
+
+svg{
+    width: 13vw;
+    height: 13vw;
+}
+
+.player {
+    color: white;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.progress-container {
+    background: rgba(255, 255, 255, 0.3);
+    height: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress{
+    background: white;
+    height: 2vw;
+    border-radius: 2vw;
+}
+
+#progress {
+    background: rgba(255, 255, 255, 0.8);
+    height: 100%;
+    width: 0%;
+    border-radius: 5px;
+}
+
+.time {
+    display: flex;
+    justify-content: space-between;
+    font-size: 4vw;
+    margin-top: 3vw;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 10px;
+}
+
+.controls button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.controls button:hover {
+    transform: scale(1.1);
+}
+
+.cardtempo{
+    width: 90vw;
+    border-radius: 4vw;
+    height: 65vh;
+    margin-left: -5vw;
+    margin-bottom: 30vw;
+}
+
+.fotinha{
+    background: url("/public/fotinha.jpeg");
+    width: 100%;
+    height: 65%;
+    border-radius: 4vw 4vw 0 0;
+    background-size: cover;
+    margin-top: 10vw;
+    background-position-x: -8vw;
+}
+
+
+.timer{
+    background: #CF0000;
+    min-height: 35%;
+    width: 100%;
+    border-radius: 0 0 4vw 4vw;
+}
+
+.nome{
+    margin: 0;
+    text-align: left;
+    padding-top: 5vw;
+    padding-left: 5vw;
+    font-size: 5vw;
+    font-weight: 500;
+}
+
+.fotinha p{
+    font-size: 5vw;
+    text-align: left;
+    padding-left: 5vw;
+    padding-top: 6vw;
+    font-weight: 500;
+}
+
+.timer h3{
+    margin: 0;
+    text-align: left;
+    padding-top: 2vw;
+    padding-left: 5vw;
+    font-size: 4vw;
+    font-weight: 400;
+}
