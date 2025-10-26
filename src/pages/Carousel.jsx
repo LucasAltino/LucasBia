@@ -11,22 +11,57 @@ function Carousel() {
         "/foto6.jpeg",
         "/foto7.jpeg",
         "/foto8.jpeg",
-
     ];
 
     const [index, setIndex] = useState(0);
+    const [touchStart, setTouchStart] = useState(0);
+    const [touchEnd, setTouchEnd] = useState(0);
 
-    // Muda a imagem a cada 5s
+    // Muda a imagem automaticamente a cada 5s
     useEffect(() => {
         const interval = setInterval(() => {
-            setIndex((prev) => (prev + 1) % images.length);
+            nextSlide();
         }, 5000);
-
         return () => clearInterval(interval);
-    }, [images.length]);
+    }, []);
+
+    const nextSlide = () => {
+        setIndex((prev) => (prev + 1) % images.length);
+    };
+
+    const prevSlide = () => {
+        setIndex((prev) => (prev - 1 + images.length) % images.length);
+    };
+
+    // Armazena o início do toque
+    const handleTouchStart = (e) => {
+        setTouchStart(e.targetTouches[0].clientX);
+    };
+
+    // Atualiza o ponto de fim do toque
+    const handleTouchMove = (e) => {
+        setTouchEnd(e.targetTouches[0].clientX);
+    };
+
+    // Verifica a direção ao soltar o dedo
+    const handleTouchEnd = () => {
+        if (touchStart - touchEnd > 50) {
+            // arrastou para a esquerda → próximo slide
+            nextSlide();
+        }
+        if (touchStart - touchEnd < -50) {
+            // arrastou para a direita → slide anterior
+            prevSlide();
+        }
+    };
 
     return (
-        <div className={styles.carousel}>
+        <div
+            className={styles.carousel}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+        >
             <img
                 src={images[index]}
                 alt={`Slide ${index + 1}`}

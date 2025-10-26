@@ -26,7 +26,7 @@ function Home() {
         },
         {
             title: "Partilhar",
-            artist: "Rubel, ANAVITÓRIA",
+            artist: "Rubel",
             audioSrc: "/partilhar.mp3",
             imageSrc: "/foto4.jpeg",
         },
@@ -41,6 +41,18 @@ function Home() {
             artist: "Djavan",
             audioSrc: "/amorpuro.mp3",
             imageSrc: "/foto6.jpeg",
+        },
+        {
+            title: "Levo Comigo",
+            artist: "Restart",
+            audioSrc: "/levocomigo.mp3",
+            imageSrc: "/foto7.jpeg",
+        },
+        {
+            title: "Não Quero Dinheiro",
+            artist: "Tim Maia",
+            audioSrc: "/queroamar.mp3",
+            imageSrc: "/foto9.jpeg",
         },
     ];
 
@@ -84,6 +96,15 @@ function Home() {
             
             <div className={styles.data}>
                 <img src="/fotodata.png" alt=""/>
+                <p>26 / 08 / 2025</p>
+            </div>
+
+            <div className={styles.carta}>
+                <p>Desde que te encontrei, Deus tem me ensinado de forma cada vez mais profunda sobre o amor, aquele amor que acalma, que inspira, que faz o coração bater mais forte só de pensar em você.
+
+                    Amor, existe algo em você que me cativa de um jeito único, algo que não sei explicar, mas que me faz me apaixonar mais e mais a cada dia. É como se tudo em mim encontrasse paz quando estou com você. A vida, desde então, ficou mais bonita, até poque como já disse nosso querido amigo Rubel, “A vida é boa, mas é muito melhor com você”.</p>
+                <p style={{margin:0, marginLeft:"21%"}}>Do seu eterno namorado,</p>
+                <p>Lucas Altino</p>
             </div>
         </div>
     );

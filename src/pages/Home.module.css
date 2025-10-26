@@ -164,15 +164,74 @@ svg{
 .data{
     background-image: url("/public/fundocoracao.png");
     display: flex;
-    background-size: contain;
+    background-size: cover;
     background-repeat: repeat;
     width: 100vw;
     height: 100vh;
     margin-top: 10vw;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 .data img{
     width: 70%;
+}
+.data p {
+    margin-top: -16vw;
+    rotate: -6deg;
+    margin-left: 5vw;
+    font-size: 5vw;
+    font-weight: 600;
+    font-family: monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.15em solid #000;
+    width: 0;
+    animation: typing 8s steps(12) infinite;
+}
+
+/* digita, pausa, apaga e repete */
+@keyframes typing {
+    0% { width: 0; }          /* começa sem texto */
+    40% { width: 11.5ch; }    /* digita até o final (≈ 2.8s) */
+    60% { width: 15.5ch; }    /* pausa com o texto completo */
+    100% { width: 0; }        /* apaga tudo (≈ 2.8s) */
+}
+
+/* cursor piscando */
+.data p {
+    animation-timing-function: steps(12, end);
+    border-right: 0.15em solid black;
+}
+
+.data p::after {
+    content: "";
+    animation: blink 2s step-end infinite;
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+.carta{
+    background-image: url("/public/fundocarta.png");
+    height: 100vh;
+    margin-bottom: -18vw;
+    margin-top: 27vw;
+    width: 121vw;
+    background-size: 120%;
+    margin-left: -22%;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.carta p{
+    width: 64vw;
+    text-align: justify;
+    margin-left: 21%;
+    font-size: 4vw;
 }
